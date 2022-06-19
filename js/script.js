@@ -79,23 +79,31 @@ myFunction(cats);
 
 function createCats (cats) {
 
-    const catHtml = "";
+    let catHtml = "";
 
     for (let i = 0; i < cats.length; i++) {
 
         const nameOfCat = cats[i].name;
         const ageOfCat = cats[i].age;
 
-        catHtml =
+        let catAgeProperty = "age unknown";
+
+        if (ageOfCat) {
+
+            catAgeProperty = ageOfCat; 
+
+        }
+
+        catHtml +=
         `<div>
         <h5>${nameOfCat}</h5>
-        <p>${ageOfCat}</p>
+        <p>${catAgeProperty}</p>
         </div>
         `;
         
-        return catHtml;
-
     }
+
+    return catHtml;
     
 }
 
