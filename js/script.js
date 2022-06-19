@@ -108,4 +108,5 @@ function createCats (cats) {
 }
 
 const catContainer = document.querySelector(".cat-container");
+
 catContainer.innerHTML = createCats(cats);
